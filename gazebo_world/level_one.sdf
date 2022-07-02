@@ -7,6 +7,12 @@
       <real_time_factor>1.0</real_time_factor>
     </physics>
 
+    <scene>
+
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
+    </scene>
+
     <plugin
       filename="ignition-gazebo-physics-system"
       name="ignition::gazebo::systems::Physics">
