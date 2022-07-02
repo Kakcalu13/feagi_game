@@ -109,8 +109,8 @@
             <diffuse>0.8 0.8 0.8 1</diffuse>
             <pbr>
                 <metal>
-                  <albedo_map>images/level_one.png</albedo_map>
-                  <normal_map>images/level_one.png</normal_map>
+                  <albedo_map>level_one.png</albedo_map>
+                  <normal_map>level_one.png</normal_map>
                 </metal>
               </pbr>
           </material>
@@ -146,8 +146,8 @@
                 <specular>0.0 1.0 0.0 1</specular>
                 <pbr>
                     <metal>
-                        <albedo_map>images/eye.png</albedo_map>
-                        <normal_map>images/eye.png</normal_map>
+                        <albedo_map>eye.png</albedo_map>
+                        <normal_map>eye.png</normal_map>
                     </metal>
               </pbr>
               </material>

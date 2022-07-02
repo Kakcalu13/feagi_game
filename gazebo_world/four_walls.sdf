@@ -104,8 +104,8 @@
                 <diffuse>0.8 0.8 0.8 1</diffuse>
                 <pbr>
                     <metal>
-                      <albedo_map>smile_wall.png</albedo_map>
-                      <normal_map>smile_wall.png</normal_map>
+                      <albedo_map>wall.png</albedo_map>
+                      <normal_map>wall.png</normal_map>
                     </metal>
                   </pbr>
               </material>
@@ -154,23 +154,6 @@
               </geometry>
             </collision>
         </link>
-
-         <joint name='wall' type='fixed'>
-            <parent>plate2</parent>
-            <child>plate1</child>
-          </joint>
-         <joint name='wall1' type='fixed'>
-            <parent>plate3</parent>
-            <child>plate2</child>
-          </joint>
-         <joint name='wall2' type='fixed'>
-            <parent>plate4</parent>
-            <child>plate3</child>
-          </joint>
-         <joint name='wall3' type='fixed'>
-            <parent>plate1</parent>
-            <child>plate4</child>
-          </joint>
         </model>
 
             <plugin filename="ignition-gazebo-touchplugin-system"
