@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+        <plugin filename="ignition-gazebo-contact-system"
+                name="ignition::gazebo::systems::Contact">
+        </plugin>
+
+
+        <model name="four_walls">
+            <link name='plate1'>
+            <pose>0.03 5 0.25 0 0 0</pose>
+            <inertial>
+              <mass>0.01</mass>
+              <inertia>
+                <ixx>0.126164</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.416519</iyy>
+                <iyz>0</iyz>
+                <izz>0.481014</izz>
+              </inertia>
+            </inertial>
+            <visual name='visual'>
+              <geometry>
+                <box>
+                  <size>10 0.05 .5</size>
+                </box>
+              </geometry>
+              <material>
+                <ambient>0.8 0.8 0.8 1</ambient>
+                <diffuse>0.8 0.8 0.8 1</diffuse>
+                <pbr>
+                    <metal>
+                      <albedo_map>wall.png</albedo_map>
+                      <normal_map>wall.png</normal_map>
+                    </metal>
+                  </pbr>
+              </material>
+            </visual>
+            <collision name='visual'>
+              <geometry>
+                <box>
+                  <size>10 0.05 .5</size>
+                </box>
+              </geometry>
+            </collision>
+          </link>
+        <link name='plate2'>
+            <pose>5 0 0.25 0 0 0</pose>
+            <inertial>
+              <mass>0.01</mass>
+              <inertia>
+                <ixx>0.126164</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.416519</iyy>
+                <iyz>0</iyz>
+                <izz>0.481014</izz>
+              </inertia>
+            </inertial>
+            <visual name='visual'>
+              <geometry>
+                <box>
+                  <size>0.055 10 .5</size>
+                </box>
+              </geometry>
+                <ambient>0.8 0.8 0.8 1</ambient>
+                <diffuse>0.8 0.8 0.8 1</diffuse>
+                <pbr>
+                    <metal>
+                      <albedo_map>wall.png</albedo_map>
+                      <normal_map>wall.png</normal_map>
+                    </metal>
+                  </pbr>
+            </visual>
+            <collision name='visual'>
+              <geometry>
+                <box>
+                  <size>0.055 10 .5</size>
+                </box>
+              </geometry>
+            </collision>
+          </link>
+        <link name='plate3'>
+            <pose>-4.95 0 0.25 0 0 0</pose>
+            <inertial>
+              <mass>0.01</mass>
+              <inertia>
+                <ixx>0.126164</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.416519</iyy>
+                <iyz>0</iyz>
+                <izz>0.481014</izz>
+              </inertia>
+            </inertial>
+            <visual name='visual'>
+              <geometry>
+                <box>
+                  <size>0.06 10 .5</size>
+                </box>
+              </geometry>
+              <material>
+                <ambient>0.8 0.8 0.8 1</ambient>
+                <diffuse>0.8 0.8 0.8 1</diffuse>
+                <pbr>
+                    <metal>
+                      <albedo_map>smile_wall.png</albedo_map>
+                      <normal_map>smile_wall.png</normal_map>
+                    </metal>
+                  </pbr>
+              </material>
+            </visual>
+            <collision name='visual'>
+              <geometry>
+                <box>
+                  <size>0.06 10 .5</size>
+                </box>
+              </geometry>
+            </collision>
+          </link>
+        <link name='plate4'>
+            <pose>0.03 -5 0.25 0 0 0</pose>
+            <inertial>
+              <mass>0.01</mass>
+              <inertia>
+                <ixx>0.126164</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.416519</iyy>
+                <iyz>0</iyz>
+                <izz>0.481014</izz>
+              </inertia>
+            </inertial>
+            <visual name='visual'>
+              <geometry>
+                <box>
+                  <size>10 0.05 .5</size>
+                </box>
+              </geometry>
+                <ambient>0.8 0.8 0.8 1</ambient>
+                <diffuse>0.8 0.8 0.8 1</diffuse>
+                <pbr>
+                    <metal>
+                      <albedo_map>wall.png</albedo_map>
+                      <normal_map>wall.png</normal_map>
+                    </metal>
+                  </pbr>
+            </visual>
+            <collision name='visual'>
+              <geometry>
+                <box>
+                  <size>10 0.05 .5</size>
+                </box>
+              </geometry>
+            </collision>
+        </link>
+
+         <joint name='wall' type='fixed'>
+            <parent>plate2</parent>
+            <child>plate1</child>
+          </joint>
+         <joint name='wall1' type='fixed'>
+            <parent>plate3</parent>
+            <child>plate2</child>
+          </joint>
+         <joint name='wall2' type='fixed'>
+            <parent>plate4</parent>
+            <child>plate3</child>
+          </joint>
+         <joint name='wall3' type='fixed'>
+            <parent>plate1</parent>
+            <child>plate4</child>
+          </joint>
+        </model>
+
+            <plugin filename="ignition-gazebo-touchplugin-system"
+                    name="ignition::gazebo::systems::TouchPlugin">
+                <target>robot</target>
+                <namespace>wall</namespace>
+                <time>0.001</time>
+                <enabled>true</enabled>
+            </plugin>
+</sdf>
