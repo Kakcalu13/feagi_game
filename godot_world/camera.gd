@@ -20,15 +20,6 @@ export var backward_action = "ui_down"
 export var left_action = "ui_left"
 export var right_action = "ui_right"
 export var spacebar = "ui_select"
-
-var rotation_speed = PI
-var _direction = Vector3(0.0, 0.0, 0.0)
-var x = 47
-var y = 26.323
-var z = 25.711
-var x_rotation = rotate_x(13.3)
-var direction = Vector3(0, 0, 0)
-var velocity = Vector3(0, 0, 0)
 var flagged = false ## This allows space and del to be able to send data without being overwritten by spam "{}"
 
 const CAMERA_TURN_SPEED = 200
