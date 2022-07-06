@@ -15,11 +15,6 @@
 
 extends Camera
 
-export var forward_action = "ui_up"
-export var backward_action = "ui_down"
-export var left_action = "ui_left"
-export var right_action = "ui_right"
-export var spacebar = "ui_select"
 var flagged = false ## This allows space and del to be able to send data without being overwritten by spam "{}"
 
 const CAMERA_TURN_SPEED = 200

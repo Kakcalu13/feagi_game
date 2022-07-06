@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Old Engine Sputter.mp3-6a2ce17d022e39d05de8aba32bdfc487.mp3str"
+
+[deps]
+
+source_file="res://Old Engine Sputter.mp3"
+dest_files=[ "res://.import/Old Engine Sputter.mp3-6a2ce17d022e39d05de8aba32bdfc487.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

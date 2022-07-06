@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tires Squeal Continuous.mp3-c92aecb6f6bd499bbe167f0d2a01ae16.mp3str"
+
+[deps]
+
+source_file="res://Tires Squeal Continuous.mp3"
+dest_files=[ "res://.import/Tires Squeal Continuous.mp3-c92aecb6f6bd499bbe167f0d2a01ae16.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
