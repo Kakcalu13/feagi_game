@@ -242,15 +242,13 @@
                 </sphere>
               </geometry>
               <material>
-                <ambient>0 1.0 0 1</ambient>
-                <diffuse>0 1.0 0 1</diffuse>
-                <specular>0.0 1.0 0.0 1</specular>
+                <diffuse>1.0 1.0 1.0</diffuse>
                 <pbr>
-                    <metal>
+                    <specular>
                         <albedo_map>eye.png</albedo_map>
-                        <normal_map>eye.png</normal_map>
-                    </metal>
-              </pbr>
+                        <specular_map>eye.png</specular_map>
+                    </specular>
+                  </pbr>
               </material>
             </visual>
             <collision name='collision'>
@@ -289,7 +287,12 @@
             <ambient>0.2 0.2 0.2 1</ambient>
             <diffuse>0.2 0.2 0.2 1</diffuse>
             <specular>0.2 0.2 0.2 1</specular>
-
+                <pbr>
+                    <metal>
+                        <albedo_map>wheel4.png</albedo_map>
+                        <normal_map>wheel4.png</normal_map>
+                    </metal>
+              </pbr>
           </material>
         </visual>
         <collision name='collision'>
@@ -344,7 +347,12 @@
             <ambient>0.2 0.2 0.2 1</ambient>
             <diffuse>0.2 0.2 0.2 1</diffuse>
             <specular>0.2 0.2 0.2 1</specular>
-
+                <pbr>
+                    <metal>
+                        <albedo_map>wheel1.png</albedo_map>
+                        <normal_map>wheel1.png</normal_map>
+                    </metal>
+              </pbr>
           </material>
         </visual>
         <collision name='collision'>
@@ -399,7 +407,12 @@
             <ambient>0.2 0.2 0.2 1</ambient>
             <diffuse>0.2 0.2 0.2 1</diffuse>
             <specular>0.2 0.2 0.2 1</specular>
-
+                <pbr>
+                    <metal>
+                        <albedo_map>wheel2.png</albedo_map>
+                        <normal_map>wheel2.png</normal_map>
+                    </metal>
+              </pbr>
           </material>
         </visual>
         <collision name='collision'>
@@ -454,7 +467,12 @@
             <ambient>0.2 0.2 0.2 1</ambient>
             <diffuse>0.2 0.2 0.2 1</diffuse>
             <specular>0.2 0.2 0.2 1</specular>
-
+                <pbr>
+                    <metal>
+                        <albedo_map>wheel3.png</albedo_map>
+                        <normal_map>wheel3.png</normal_map>
+                    </metal>
+              </pbr>
           </material>
         </visual>
         <collision name='collision'>
