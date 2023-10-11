@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+    <plugin filename="ignition-gazebo-contact-system"
+            name="ignition::gazebo::systems::Contact">
+    </plugin>
+
+
+    <model name="enemy">
+        <link name='enemy'>
+            <visual name='visual'>
+              <geometry>
+               <mesh>
+                  <uri>enemy.dae</uri>
+                  <scale>.05 0.05 0.05</scale>
+               </mesh>
+              </geometry>
+                <material>
+                <pbr>
+                    <specular>
+                        <albedo_map>test.png</albedo_map>
+                        <specular_map>test.png</specular_map>
+                    </specular>
+                </pbr>
+              </material>
+            </visual>
+            <collision name='visual'>
+              <geometry>
+               <mesh>
+                  <uri>enemy.dae</uri>
+                  <scale>.05 0.05 0.05</scale>
+                </mesh>
+              </geometry>
+            </collision>
+        </link>
+    </model>
+    <plugin filename="ignition-gazebo-touchplugin-system"
+            name="ignition::gazebo::systems::TouchPlugin">
+        <target>robot</target>
+        <namespace>enemy</namespace>
+        <time>0.001</time>
+        <enabled>true</enabled>
+    </plugin>
+</sdf>
